@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Data;
 
 class Calculator
@@ -17,3 +17,17 @@ class Calculator
                 double result = EvaluateException(input);
                 Console.WriteLine($"Result: {result}");
             }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Invalid expression. Error");
+            }
+
+            Console.WriteLine("Do you want to continue (yes/no)");
+            string answer = Console.ReadLine().ToLower();
+
+            if (answer != "yes")
+            {
+                break;
+            }
+        }
+    }
